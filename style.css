@@ -1,0 +1,100 @@
+body {
+  width: 100vw;
+  /* overflow-x: hidden; */
+  box-sizing: border-box;
+}
+
+.header-mobile{
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 10px;
+    position: relative;
+    z-index: 1000;
+}
+
+.mobile-menu {
+    width: 15px;
+    height: 10px;
+    cursor: pointer;
+  }
+  
+
+.bg-intro-mobile{
+    background-image:url('./images/bg-intro-mobile.svg') ;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 250px; /* Adjust as needed */
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    padding-bottom: 20px;
+}
+
+.mockups {
+    position: absolute;
+    top: -100px; /* Adjust to position the phones how you want */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%; /* Make the image scale for mobile */
+    z-index: 2; /* Ensure it sits above the background */
+    clip-path: inset(100px 0 0 0);
+  }
+
+  .main-mobile {
+    display: grid;
+    padding-bottom: 100px;
+  }
+
+  .main-mobile h1{
+    font-family: "Satoshi" sans-serif;
+    font-weight: 100;
+    text-align: center;
+  }
+
+  .main-mobile p {
+    color: hsl(233, 8%, 62%);
+    text-align: center;
+  }
+
+  .request-invite-btn{
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    background-image: linear-gradient(to right,hsl(136, 65%, 51%), hsl(156, 65%, 47%), hsl(192, 70%, 55%));
+    border-radius: 25px;
+    width: 45%;
+    border: none;
+    cursor: pointer;
+    transition: 0.1s;
+  }
+
+  .request-invite-btn:hover {
+    border: solid 2px blue; 
+  }
+
+  .request-invite-btn span {
+    color: hsl(0, 0%, 100%);
+    padding: 12px 0px;
+  }
+
+  .main-mobile1 {
+    background-color: hsl(220, 16%, 96%);
+    width: 100%;
+  }
+  .main-mobile1 h1 {
+    font-family: "Satoshi" sans-serif;
+    text-align: center;
+  }
+
+  .main-mobile1 p {
+    color: hsl(233, 8%, 62%);
+    text-align: center;
+  }
+
+  .mobile1-contents {
+    padding: 40px 0px;
+  }
+
+
+
