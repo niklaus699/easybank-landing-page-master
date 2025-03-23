@@ -1,7 +1,19 @@
 body {
-  /* width: 100vw; */
   overflow-x: hidden;
   box-sizing: border-box;
+  font-family: Kumbh Sans;
+  color: black;
+}
+p, span {
+  font-family: Work Sans;
+}
+
+h1,h2,h3 {
+  color: black;
+}
+
+#closeNav {
+  display: none;
 }
 
 .header-mobile{
@@ -9,7 +21,7 @@ body {
     justify-content: space-between;
     padding: 25px 10px;
     position: relative;
-    z-index: 1000;
+    z-index: 20;
 }
 
 .mobile-menu {
@@ -46,9 +58,44 @@ body {
     padding-bottom: 100px;
   }
 
+  /* navbar */
+    /* Overlay style */
+    #overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height:100%;
+      background-color: rgba(0, 0, 0, 0.5); /* dim background */
+      z-index: 3;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+    #overlay.show {
+      opacity: 1;
+      pointer-events: all;
+    }
+    /* Nav content styling */
+    #navContent {
+      position: absolute;
+      top: 10%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90%;
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      z-index: 30; /* Above the overlay */
+      display: none;
+    }
+    #navContent.show {
+      display: grid;
+    }
+
+
   .main-mobile h1{
-    font-family: "Satoshi" sans-serif;
-    font-weight: 100;
+    font-weight: 400;
     text-align: center;
   }
 
@@ -66,7 +113,7 @@ body {
     width: 45%;
     border: none;
     cursor: pointer;
-    transition: 0.1s;
+    transition: 0.3s;
   }
 
   .request-invite-btn:hover {
@@ -74,17 +121,19 @@ body {
   }
 
   .request-invite-btn span {
+    text-align: center;
     color: hsl(0, 0%, 100%);
     padding: 12px 0px;
   }
 
   .main-mobile1 {
+    display: grid;
     background-color: hsl(220, 16%, 96%);
     width: 100%;
   }
   .main-mobile1 h1 {
-    font-family: "Satoshi" sans-serif;
     text-align: center;
+    font-weight: 300;
   }
 
   .main-mobile1 p {
@@ -93,8 +142,132 @@ body {
   }
 
   .mobile1-contents {
-    padding: 40px 0px;
+    display: grid;
+    padding: 35px 0px;
+    justify-self: center;
+  }
+
+  .mobile1-contents h2 {
+    color: black;
+    text-align: center;
+    font-weight: 300;
+  }
+
+  .mobile1-contents p {
+    color: hsl(233, 8%, 62%);
+  }
+
+  .icons {
+    justify-self: center;
   }
 
 
+
+  .article-mobile {
+    display: grid;
+    width: 100%;
+    background-color: hsl(0, 0%, 98%);
+    padding: 60px 0px;
+  }
+
+  .article-mobile h1 {
+    justify-self: center;
+    font-weight: 300;
+  }
+
+  .article-mobile-content-divs {
+    justify-self: center;
+    width: 96%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: hsl(0, 0%, 100%);
+  }
+  .article-mobile-content-divs img{
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  .pad-up-down {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .pad-up-down h3 {
+    flex-wrap: wrap;
+    font-weight: 300;
+  }
+
+  .pad-up-down span {
+    color: hsl(233, 8%, 62%);
+    font-size: 15px;
+    flex-wrap: wrap;
+  }
+
+  .pad-me {
+    padding-bottom: 30px;
+  }
+
+  .footer-mobile {
+    background-color: hsl(233, 26%, 24%);
+    width: 100%;
+    display: grid;
+    padding: 30px 0px;
+    justify-content: center;
+  }
+
+  .footer-contents-mobile {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-self: center;
+    padding-bottom: 30px;
+    width: 100%;
+  }
+
+  .logo {
+    justify-self: center;
+    padding-bottom: 30px;
+  }
+
+  .social-media-icons {
+    justify-self: center;
+    display: flex;
+    justify-content: space-between;
+    /* padding-bottom: 25px; */
+  }
+
+  /* .social-media-icons img {
+    ga
+  } */
+
+
+  .links {
+    display: grid;
+    padding-bottom: 25px;
+    /* justify-self: center; */
+
+  }
+
+  a {
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    padding: 8px 0px;
+  }
+
+  a:hover {
+    color: hsl(156, 65%, 47%);
+  }
+
+  .footer-base-text {
+    padding: 30px 0px;
+    color: hsl(233, 8%, 62%);
+    justify-self: center;
+  }
+
+ 
 
